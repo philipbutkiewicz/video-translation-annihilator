@@ -15,4 +15,4 @@ chmod +x process-media-files.sh
 ./process-media-files.sh
 ```
 
-Yes - the script doesn't actually do anything but generate a bash script. You can ensure every step the generated script makes before executing on your video library.
+Yes - the script doesn't actually do anything but generate a bash script. You can verify every step the generated script makes before executing on your video library.

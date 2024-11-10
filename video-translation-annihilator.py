@@ -158,9 +158,10 @@ def process_media_files(media_files: List[MediaFile], languages: List[str]) -> s
             subtitle_stream_ids=subtitle_stream_ids
         )
 
-        script += f'echo "Processing {media_file.path}..."\n'
-        script += ' '.join([f'"{arg}"' if ' ' in arg else arg for arg in cmdline])
-        script += '\n\n'
+        if len(audio_stream_ids) or len(subtitle_stream_ids):
+            script += f'echo "Processing {media_file.path}..."\n'
+            script += ' '.join([f'"{arg}"' if ' ' in arg else arg for arg in cmdline])
+            script += '\n\n'
 
     return script
 
